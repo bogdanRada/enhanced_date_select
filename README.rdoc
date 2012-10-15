@@ -1,9 +1,82 @@
 = enhanced_date_select
 
-Description goes here.
+= Overview
+
+
+An enhanced date select form helper that allows you to use the full {HTML spec}[http://www.w3.org/TR/html5] for select
+option elements (example: HTML5 data-* attributes, etc.) This is more than what you get with the
+default Rails date select helper because it can allow values to persist in dropdowns.
+
+= Features
+
+* Fully customizable HTML5 attributes for date_select .
+
+= Requirements
+
+1. {Ruby 1.9.x}[http://www.ruby-lang.org]
+2. {Ruby on Rails}[http://rubyonrails.org].
+
+= Setup
+
+Type the following from the command line to install:
+
+  gem install enhanced_date_select
+
+Add the following to your Gemfile:
+
+  gem "enhanced_date_select"
+
+= Usage
+
+Use the +enhanced_date_select+ instead of +date_select+ helper
+methods in your views. Example:
+
+  <%= form_for @post do |form| %>
+        <div >
+        <%= form.enhanced_date_select :birthday, { :prompt => {
+            :day => "please select one",
+            :month => "please select one",
+            :year => "please select one" },
+          :value => {:year => @year, :month => @month, :day => @day},
+          :order => [:day, :month, :year],
+          :start_year => Time.now.year,
+          :end_year => 1940 }, { :class => "input_3cols" } %>
+      </div>
+  <% end %>
+
+...or alternatively:
+
+  <%= form_tag "/posts/" do %>
+      <div >
+        <%= form.date_select :birthday, { :prompt => {
+            :day => "please select one",
+            :month => "please select one",
+            :year => "please select one" },
+          :value => Date.new(2011,02,01),
+          :order => [:day, :month, :year],
+          :start_year => Time.now.year,
+          :end_year => 1940 }, { :class => "input_3cols" } %>
+      </div>
+  <% end %>
+
+The +enhanced_date_select+ takes all the standard options as the default Rails date_select
+method. The only difference is that it expects an hash with values for year, month and day instead of an date object.
+
+= Testing
+
+To test, do the following:
+
+1. cd to the gem root.
+2. bundle install
+3. bundle exec rspec spec
+
+= Contributions
+
+Please log all feedback/issues via {GitHub Issues}[http://github.com/bogdanRada/enhanced_date_select/issues]. Thanks.
+
 
 == Contributing to enhanced_date_select
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
@@ -16,4 +89,3 @@ Description goes here.
 
 Copyright (c) 2012 bogdanRada. See LICENSE.txt for
 further details.
-
