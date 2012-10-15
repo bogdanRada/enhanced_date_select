@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "enhanced_date_select"
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["bogdanRada"]
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
-    ".document",
+    ".rspec",
     ".rvmrc",
     "Gemfile",
     "Gemfile.lock",
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "enhanced_date_select-0.1.2.gem",
     "enhanced_date_select.gemspec",
     "lib/enhanced_date_select.rb",
     "spec/enhanced_date_select_spec.rb",
