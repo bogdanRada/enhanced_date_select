@@ -3,18 +3,7 @@ require "spec_helper"
 describe "Enhanced DateSelect" do
   include ActionView::Helpers::FormOptionsHelper
 
-  before :each do
-    @standard_options = [
-      {text: "One", value: 1},
-      {text: "Two", value: 2},
-      {text: "Three", value: 3}
-    ]
-    @enhanced_options = [
-      {text: "One", value: 1, "data-url" => "/tasks/1"},
-      {text: "Two", value: 2, "data-url" => "/tasks/2"},
-      {text: "Three", value: 3, "data-url" => "/tasks/3"}
-    ]
-  end
+  
 
   describe ".enhanced_date_select" do
   	it "constructs 3 selectboxes" do
