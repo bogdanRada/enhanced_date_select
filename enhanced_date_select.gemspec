@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "pkg/enhanced_date_select-0.1.2.gem",
+    "enhanced_date_select-0.1.2.gem",
     "enhanced_date_select.gemspec",
     "lib/enhanced_date_select.rb",
     "spec/enhanced_date_select_spec.rb",
@@ -70,3 +70,4 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<simplecov>, [">= 0"])
   end
 end
+
