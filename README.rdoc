@@ -45,7 +45,7 @@ methods in your views. Example:
 
 ...or alternatively:
 
-  <%= form_tag "/posts/" do %>
+  <%= form_for @post do |form| %>
       <div >
         <%= form.date_select :birthday, { :prompt => {
             :day => "please select one",
