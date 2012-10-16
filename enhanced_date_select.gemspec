@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "enhanced_date_select"
-  s.version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["bogdanRada"]
-  s.date = "2012-10-15"
+  s.date = "2012-10-16"
   s.description = "\"Enhances ActionView with a customizable date select form helper where any valid HTML attribute can be applied.\""
   s.email = "raoul_ice@yahoo.com"
   s.extra_rdoc_files = [
@@ -20,11 +20,11 @@ Gem::Specification.new do |s|
     ".rspec",
     ".rvmrc",
     "Gemfile",
-    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "enhanced_date_select-0.3.0.gem",
     "enhanced_date_select.gemspec",
     "lib/enhanced_date_select.rb",
     "spec/enhanced_date_select_spec.rb",
@@ -40,33 +40,57 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_development_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_development_dependency(%q<capybara>, [">= 0"])
+      s.add_development_dependency(%q<spork>, ["> 0.9.0.rc"])
+      s.add_development_dependency(%q<active_reload>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rake>, [">= 0"])
-      s.add_development_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_development_dependency(%q<rspec-mocks>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
+      s.add_development_dependency(%q<simplecov-rcov>, [">= 0"])
+      s.add_development_dependency(%q<webmock>, [">= 0"])
+      s.add_development_dependency(%q<mocha>, [">= 0"])
     else
+      s.add_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_dependency(%q<capybara>, [">= 0"])
+      s.add_dependency(%q<spork>, ["> 0.9.0.rc"])
+      s.add_dependency(%q<active_reload>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<rdoc>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
-      s.add_dependency(%q<rspec-rails>, [">= 0"])
+      s.add_dependency(%q<rspec-mocks>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<simplecov>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
+      s.add_dependency(%q<simplecov-rcov>, [">= 0"])
+      s.add_dependency(%q<webmock>, [">= 0"])
+      s.add_dependency(%q<mocha>, [">= 0"])
     end
   else
+    s.add_dependency(%q<rspec-rails>, [">= 0"])
+    s.add_dependency(%q<capybara>, [">= 0"])
+    s.add_dependency(%q<spork>, ["> 0.9.0.rc"])
+    s.add_dependency(%q<active_reload>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<rdoc>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])
-    s.add_dependency(%q<rspec-rails>, [">= 0"])
+    s.add_dependency(%q<rspec-mocks>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<simplecov>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
+    s.add_dependency(%q<simplecov-rcov>, [">= 0"])
+    s.add_dependency(%q<webmock>, [">= 0"])
+    s.add_dependency(%q<mocha>, [">= 0"])
   end
 end
 
