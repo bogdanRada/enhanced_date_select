@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
+    ".rbenv-version",
     ".rspec",
     ".rvmrc",
     "Gemfile",
