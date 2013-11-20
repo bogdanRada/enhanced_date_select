@@ -2,7 +2,6 @@
 
 = Overview
 
-* https://f.cloud.github.com/assets/1104923/1563031/0efe630c-5058-11e3-8502-1e0b145de80c.png
 
 
 An enhanced date select form helper that allows you to use the full {HTML spec}[http://www.w3.org/TR/html5] for date_select helper methods from rails. This is more than what you get with the
