@@ -54,18 +54,18 @@ describe "Enhanced DateSelect" do
     before(:each) do
       if ( Rails::VERSION::MAJOR.to_i <= 3 )
       ActionView::Helpers::InstanceTag.stub(:new).and_return(@instance_tag)
-      @class = " ActionView::Helpers::InstanceTag"
+      @class = ActionView::Helpers::InstanceTag
       else
       ActionView::Helpers::Tags::Base.stub(:new).and_return(@instance_tag)
-       @class = "ActionView::Helpers::Tags::Base"
+       @class = ActionView::Helpers::Tags::Base
       end
     end
 
     it "should call the instance tag with argument" do
      if ( Rails::VERSION::MAJOR.to_i <= 3 )
-      @class.constantize.should_receive(:new).with(student, 'birthday', self, options.delete(:object)).and_return(@instance_tag)
+      @class.should_receive(:new).with(student, 'birthday', self, options.delete(:object)).and_return(@instance_tag)
     else
-        @class.constantize.should_receive(:new).with(student, 'birthday', self, options).and_return(@instance_tag)
+        @class.should_receive(:new).with(student, 'birthday', self, options).and_return(@instance_tag)
         end
       enhanced_date_select(student,'birthday',options )
     end
