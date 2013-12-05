@@ -44,7 +44,6 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<enhanced_date_select>, [">= 0"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
       s.add_development_dependency(%q<guard>, [">= 0"])
       s.add_development_dependency(%q<guard-rspec>, [">= 0"])
@@ -62,7 +61,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov-rcov>, [">= 0"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
     else
-      s.add_dependency(%q<enhanced_date_select>, [">= 0"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
       s.add_dependency(%q<guard>, [">= 0"])
       s.add_dependency(%q<guard-rspec>, [">= 0"])
@@ -81,7 +79,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<mocha>, [">= 0"])
     end
   else
-    s.add_dependency(%q<enhanced_date_select>, [">= 0"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
     s.add_dependency(%q<guard>, [">= 0"])
     s.add_dependency(%q<guard-rspec>, [">= 0"])
