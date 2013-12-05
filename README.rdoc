@@ -1,4 +1,4 @@
-= enhanced_date_select  {<img src="https://badge.fury.io/rb/enhanced_date_select.png" alt="Gem Version" />}[http://badge.fury.io/rb/enhanced_date_select]
+= enhanced_date_select {<img src="https://travis-ci.org/bogdanRada/enhanced_date_select.png" />}[https://travis-ci.org/bogdanRada/enhanced_date_select] {<img src="https://badge.fury.io/rb/enhanced_date_select.png" alt="Gem Version" />}[http://badge.fury.io/rb/enhanced_date_select]
 
 = Overview
 
