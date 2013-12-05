@@ -3,6 +3,7 @@
 = Overview
 
 
+
 An enhanced date select form helper that allows you to use the full {HTML spec}[http://www.w3.org/TR/html5] for date_select helper methods from rails. This is more than what you get with the
 default Rails date select helper because it can allow values to persist in dropdowns even if you submit a invalid value.
 
