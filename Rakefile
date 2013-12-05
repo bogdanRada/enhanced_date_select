@@ -1,7 +1,11 @@
 # encoding: utf-8
 
 require 'rubygems'
-require 'bundler'
+require 'bundler/setup'
+require 'bundler/gem_tasks'
+require 'appraisal'
+require 'rspec/core/rake_task'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -27,7 +31,15 @@ Jeweler::RubygemsDotOrgTasks.new
 
 
 
-task :default => :test
+RSpec::Core::RakeTask.new(:spec)
+
+desc "Default: run the unit tests."
+task :default => [:all]
+
+desc 'Test the plugin under all supported Rails versions.'
+task :all => ["appraisal:install"] do |t|
+  exec('rake appraisal spec')
+end
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
