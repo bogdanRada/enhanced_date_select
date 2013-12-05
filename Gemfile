@@ -5,4 +5,22 @@ source "http://rubygems.org"
 gemspec
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+  gem 'appraisal'
+  gem "shoulda"
+  gem "rdoc"
+  gem 'rspec'
+  gem 'rake'
+  gem 'rspec-mocks'
+  gem "bundler"
+  gem "simplecov"
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
+  gem 'simplecov-summary'
+  gem 'mocha'
+end
 

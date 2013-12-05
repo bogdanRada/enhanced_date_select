@@ -15,20 +15,6 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "enhanced_date_select"
-  gem.homepage = "http://github.com/bogdanRada/enhanced_date_select"
-  gem.license = "MIT"
-  gem.summary = %Q{"enhanced date select"}
-  gem.description = %Q{"Enhances ActionView with a customizable date select form helper where any valid HTML attribute can be applied."}
-  gem.email = "raoul_ice@yahoo.com"
-  gem.authors = ["bogdanRada"]
-  # dependencies defined in Gemfile
-end
-Jeweler::RubygemsDotOrgTasks.new
-
 
 
 RSpec::Core::RakeTask.new(:spec)
