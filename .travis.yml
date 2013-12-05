@@ -1,7 +1,7 @@
 before_install:
   - gem install bundler
   - gem install appraisal
-   -gem install rspec-rails
+  - gem install rspec-rails
 rvm:
   - 1.9.3
   - jruby-19mode
