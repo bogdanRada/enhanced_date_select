@@ -107,3 +107,4 @@ tags
 /.git-rewrite/
 .rbenv-version
 .ruby-version
+Gemfile.lock
