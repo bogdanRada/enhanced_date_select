@@ -31,7 +31,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency(%q<rspec-mocks>, [">= 0"])
   s.add_development_dependency(%q<bundler>, [">= 0"])
   s.add_development_dependency(%q<simplecov>, [">= 0"])
-  s.add_development_dependency(%q<simplecov>, [">= 0"])
   s.add_development_dependency(%q<simplecov-rcov>, [">= 0"])
   s.add_development_dependency(%q<simplecov-summary>, [">= 0"])
   s.add_development_dependency(%q<mocha>, [">= 0"])
