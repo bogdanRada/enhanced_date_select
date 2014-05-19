@@ -7,3 +7,4 @@ source "http://rubygems.org"
 # Include everything needed to run rake, tests, features, etc.
 
 
+gem 'coveralls', require: false
