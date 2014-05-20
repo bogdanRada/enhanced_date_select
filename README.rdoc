@@ -1,6 +1,6 @@
 = enhanced_date_select {<img src="https://badge.fury.io/rb/enhanced_date_select.png" alt="Gem Version" />}[http://badge.fury.io/rb/enhanced_date_select]
 {<img src="https://travis-ci.org/bogdanRada/enhanced_date_select.png" />}[https://travis-ci.org/bogdanRada/enhanced_date_select]  
-{<img src="https://www.versioneye.com/user/projects/52fc7297ec1375346600007d/badge.png" alt="Dependency Status" />}[https://www.versioneye.com/user/projects/52fc7297ec1375346600007d]{<img src="https://www.versioneye.com/user/projects/52fc7297ec1375346600007d/badge.png" alt="Dependency Status" />}[https://www.versioneye.com/user/projects/52fc7297ec1375346600007d]
+{<img src="https://www.versioneye.com/user/projects/52fc72fdec1375ccd20000a0/badge.svg" alt="Dependency Status" />}[https://www.versioneye.com/user/projects/52fc7297ec1375346600007d]{<img src="https://www.versioneye.com/user/projects/52fc7297ec1375346600007d/badge.png" alt="Dependency Status" />}[https://www.versioneye.com/user/projects/52fc7297ec1375346600007d]
 {<img src="https://coveralls.io/repos/bogdanRada/enhanced_date_select/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/bogdanRada/enhanced_date_select]
 {<img src="https://reposs.herokuapp.com/?path=bogdanRada/enhanced_date_select"  alt="Repo Size"/>}[https://github.com/bogdanRada/enhanced_date_select]
 {<img src="https://gem-download-badge.herokuapp.com/?gem=enhanced_date_select&type=total"  alt="Version Downloads"/>}[https://rubygems.org/gems/enhanced_date_select]
