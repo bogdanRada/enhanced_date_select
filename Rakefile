@@ -5,6 +5,8 @@ require 'bundler/setup'
 require 'bundler/gem_tasks'
 require 'appraisal'
 require 'rspec/core/rake_task'
+require 'coveralls/rake/task'
+Coveralls::RakeTask.new
 
 begin
   Bundler.setup(:default, :development)
@@ -24,7 +26,11 @@ task :default => [:all]
 
 desc 'Test the plugin under all supported Rails versions.'
 task :all   do |t|
-  exec(' bundle exec appraisal install && bundle exec rake appraisal spec')
+  if ENV["TRAVIS"]
+    exec(' bundle exec appraisal install && bundle exec rake appraisal spec && bundle exec rake coveralls:push')
+  else
+    exec(' bundle exec appraisal install && bundle exec rake appraisal spec')
+  end
 end
 
 require 'rdoc/task'
