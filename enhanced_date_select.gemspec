@@ -1,7 +1,8 @@
+require File.expand_path("../version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "enhanced_date_select"
-  s.version     = File.exist?('VERSION') ? File.read('VERSION') : ""
+  s.version     = EnhancedDateSelect.gem_version
   s.platform    = Gem::Platform::RUBY
   s.summary = "\"enhanced date select\""
   s.email       = "raoul_ice@yahoo.com"
