@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+require File.expand_path("../version", __FILE__)
 require 'rubygems'
 require 'bundler/setup'
 require 'bundler/gem_tasks'
@@ -37,10 +37,9 @@ end
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
+ 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "enhanced_date_select #{version}"
+  rdoc.title = "enhanced_date_select #{ EnhancedDateSelect.gem_version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
