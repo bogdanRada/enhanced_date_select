@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov', '~> 0.8', '>= 0.8.2'
   s.add_development_dependency 'simplecov-summary', '~> 0.0', '>= 0.0.4'
   s.add_development_dependency 'mocha','~> 1.1', '>= 1.1.0'
-  s.add_development_dependency 'coveralls','~> 0.7', '>= 0.7.0'
+  s.add_development_dependency 'coveralls','~> 0.7.1', '>= 0.7.1'
   s.add_development_dependency 'shoulda', '~> 3.5', '>= 3.5.0'
   s.add_development_dependency 'rake',  '~> 10.3', '>= 10.3.0'
   s.add_development_dependency 'rspec-mocks',  '~> 2.14', '>= 2.14.0'
