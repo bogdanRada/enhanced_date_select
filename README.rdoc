@@ -5,6 +5,8 @@
 {<img src="https://codeclimate.com/github/bogdanRada/enhanced_date_select.png" />}[https://codeclimate.com/github/bogdanRada/enhanced_date_select]
 {<img src="https://reposs.herokuapp.com/?path=bogdanRada/enhanced_date_select"  alt="Repo Size"/>}[https://github.com/bogdanRada/enhanced_date_select]
 {<img src="https://ruby-gem-downloads-badge.herokuapp.com/enhanced_date_select?type=total&style=dynamic"  alt="Version Downloads"/>}[https://rubygems.org/gems/enhanced_date_select]
+{<img src="http://stillmaintained.com/bogdanRada/enhanced_date_select.png"  alt=""/>}[https://rubygems.org/gems/enhanced_date_select]
+
 = Overview
 
 
