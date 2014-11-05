@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n")
   s.test_files = s.files.grep(/^(spec)/)
   s.require_paths = ["lib"]
+  s.required_ruby_version = '>= 1.9'
   
    s.add_development_dependency 'rspec-rails', '~> 2.0', '>= 2.0'
   s.add_development_dependency 'guard', '~> 2.6', '>= 2.6.1'
