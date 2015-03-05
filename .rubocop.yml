@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
-    - washout_builder.gemspec
+    - enhanced_date_select.gemspec
+    - Guardfile
 
 Documentation:
   Enabled: false
