@@ -6,10 +6,10 @@ module EnhancedDateSelect
 
   module VERSION
     MAJOR = 1
-    MINOR = 0
-    TINY  = 8
-    PRE   = nil
+    MINOR = 1
+    TINY = 0
+    PRE = nil
 
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")
+    STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
 end
