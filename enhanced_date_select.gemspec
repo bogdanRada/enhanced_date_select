@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = '>= 1.9'
   
-   s.add_development_dependency 'rspec-rails', '~> 2.0', '>= 2.0'
+  s.add_development_dependency 'rspec-rails', '~> 2.0', '>= 2.0'
   s.add_development_dependency 'guard', '~> 2.6', '>= 2.6.1'
   s.add_development_dependency 'guard-rspec', '~> 4.2', '>= 4.2.9'
   s.add_development_dependency 'appraisal', '~> 1.0', '>= 1.0.0'
@@ -33,5 +33,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda', '~> 3.5', '>= 3.5.0'
   s.add_development_dependency 'rake',  '~> 10.3', '>= 10.3.0'
   s.add_development_dependency 'rspec-mocks',  '~> 2.14', '>= 2.14.0'
-
+  s.add_development_dependency 'rubocop', '0.29'
+  s.add_development_dependency 'phare'
+  s.add_development_dependency "scss-lint"
 end
