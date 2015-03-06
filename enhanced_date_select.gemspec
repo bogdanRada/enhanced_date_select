@@ -34,6 +34,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake',  '~> 10.3', '>= 10.3.0'
   s.add_development_dependency 'rspec-mocks',  '~> 2.14', '>= 2.14.0'
   s.add_development_dependency 'rubocop', '0.29'
-  s.add_development_dependency 'phare'
-  s.add_development_dependency "scss-lint"
+  s.add_development_dependency 'phare', '~> 0.6', '>= 0.6'
+  s.add_development_dependency "scss-lint", '~> 0.34', '>= 0.34'
 end
