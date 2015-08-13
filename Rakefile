@@ -29,14 +29,14 @@ task :all do
   if ENV['TRAVIS']
     exec('bundle exec phare && bundle exec appraisal install && bundle exec rake appraisal spec && bundle exec rake coveralls:push')
   else
-    exec('bundle exec phare && bundle exec appraisal install && bundle exec rake appraisal spec')
+    exec('bundle exec rubocop -a . && bundle exec phare && bundle exec appraisal install && bundle exec rake appraisal spec')
   end
 end
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "enhanced_date_select #{ EnhancedDateSelect.gem_version}"
+  rdoc.title = "enhanced_date_select #{EnhancedDateSelect.gem_version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

@@ -21,19 +21,21 @@ Gem::Specification.new do |s|
   s.test_files = s.files.grep(/^(spec)/)
   s.require_paths = ["lib"]
   s.required_ruby_version = '>= 1.9'
-  
-  s.add_development_dependency 'rspec-rails', '~> 2.0', '>= 2.0'
-  s.add_development_dependency 'guard', '~> 2.6', '>= 2.6.1'
-  s.add_development_dependency 'guard-rspec', '~> 4.2', '>= 4.2.9'
-  s.add_development_dependency 'appraisal', '~> 1.0', '>= 1.0.0'
-  s.add_development_dependency 'simplecov', '~> 0.8', '>= 0.8.2'
-  s.add_development_dependency 'simplecov-summary', '~> 0.0', '>= 0.0.4'
+ 
+  s.add_development_dependency 'appraisal', '~> 2.0', '>= 2.0'
+  s.add_development_dependency 'coveralls','~> 0.8', '>= 0.8'
+  s.add_development_dependency 'guard', '~> 2.13', '>= 2.13'
+  s.add_development_dependency 'guard-rspec', '~> 4.6', '>= 4.6'
+  s.add_development_dependency 'lorax', '~> 0', '>= 0.2'
   s.add_development_dependency 'mocha','~> 1.1', '>= 1.1.0'
-  s.add_development_dependency 'coveralls','~> 0.7.1', '>= 0.7.1'
-  s.add_development_dependency 'shoulda', '~> 3.5', '>= 3.5.0'
-  s.add_development_dependency 'rake',  '~> 10.3', '>= 10.3.0'
-  s.add_development_dependency 'rspec-mocks',  '~> 2.14', '>= 2.14.0'
-  s.add_development_dependency 'rubocop', '0.29'
-  s.add_development_dependency 'phare', '~> 0.6', '>= 0.6'
-  s.add_development_dependency "scss-lint", '~> 0.34', '>= 0.34'
+    s.add_development_dependency 'nokogiri', '~> 1.6', '>= 1.6'
+  s.add_development_dependency 'phare', '~> 0.7', '>= 0.7'
+  s.add_development_dependency 'rake',  '~> 10.4', '>= 10.4'
+  s.add_development_dependency 'rspec-mocks',  '~>3.3', '>= 3.3'
+  s.add_development_dependency 'rspec-rails', '~> 3.3', '>= 3.3'
+  s.add_development_dependency 'rubocop', '0.33' 
+  s.add_development_dependency 'shoulda', '~> 3.5', '>= 3.5.0'  
+  s.add_development_dependency 'simplecov', '~> 0.10', '>= 0.10'
+  s.add_development_dependency 'simplecov-summary', '~> 0.0', '>= 0.0.4'
+   
 end
