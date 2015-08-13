@@ -13,7 +13,3 @@ rvm:
   - 2.2.2
 env:
   - RAILS_ENV=test RACK_ENV=test
-branches:
-  only:
-    - master
-    - develop  
