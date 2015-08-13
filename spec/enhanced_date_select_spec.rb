@@ -52,28 +52,35 @@ describe 'Enhanced DateSelect' do
         day: 'please select one',
         month: 'please select one',
         year: 'please select one' } }
-      @form_builder.enhanced_date_select(:birthday, options.merge(custom)).should ==
-        "#{hidden_field(tag_name.to_sym, "#{tag_name}_3i", value: 1, name: "#{tag_name}[#{tag_name}(3i)]")}
-#{select_month(options[:value][:month],
-               field_name: "#{tag_name}(2i)",
-               prefix: tag_name,
-               prompt: custom[:prompt][:month])}#{select_year(options[:value][:year],
-                                                              start_year: options[:start_year],
-                                                              end_year: options[:end_year],
-                                                              field_name: "#{tag_name}(1i)",
-                                                              prefix: tag_name,
-                                                              prompt: custom[:prompt][:year])}"
+      a_doc = "#{hidden_field(tag_name.to_sym, "#{tag_name}_3i", value: 1, name: "#{tag_name}[#{tag_name}(3i)]")}
+    #{select_month(options[:value][:month],
+                   field_name: "#{tag_name}(2i)",
+                   prefix: tag_name,
+                   prompt: custom[:prompt][:month])}#{select_year(options[:value][:year],
+                                                                  start_year: options[:start_year],
+                                                                  end_year: options[:end_year],
+                                                                  field_name: "#{tag_name}(1i)",
+                                                                  prefix: tag_name,
+                                                                  prompt: custom[:prompt][:year])}"
+      b_doc = @form_builder.enhanced_date_select(:birthday, options.merge(custom))
+      a =  Nokogiri::XML(a_doc)
+      b =  Nokogiri::XML(b_doc)
+      Lorax::Signature.new(a.root).signature.should eq Lorax::Signature.new(b.root).signature
     end
 
     it 'construct withoud the day dropdown' do
-      @form_builder.enhanced_date_select(:birthday, options).should == "#{hidden_field(tag_name.to_sym, "#{tag_name}_3i", value: 1, name: "#{tag_name}[#{tag_name}(3i)]")}
-#{select_month(options[:value][:month],
-               field_name: "#{tag_name}(2i)",
-               prefix: tag_name)}#{select_year(options[:value][:year],
-                                               start_year: options[:start_year],
-                                               end_year: options[:end_year],
-                                               field_name: "#{tag_name}(1i)",
-                                               prefix: tag_name)}"
+      a_doc = "#{hidden_field(tag_name.to_sym, "#{tag_name}_3i", value: 1, name: "#{tag_name}[#{tag_name}(3i)]")}
+  #{select_month(options[:value][:month],
+                 field_name: "#{tag_name}(2i)",
+                 prefix: tag_name)}#{select_year(options[:value][:year],
+                                                 start_year: options[:start_year],
+                                                 end_year: options[:end_year],
+                                                 field_name: "#{tag_name}(1i)",
+                                                 prefix: tag_name)}"
+      b_doc = @form_builder.enhanced_date_select(:birthday, options)
+      a = Nokogiri::XML(a_doc)
+      b = Nokogiri::XML(b_doc)
+      Lorax::Signature.new(a.root).signature.should eq Lorax::Signature.new(b.root).signature
     end
   end
 
