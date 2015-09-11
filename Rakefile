@@ -1,5 +1,5 @@
 # encoding: utf-8
-require File.expand_path('../version', __FILE__)
+require File.expand_path('../lib/version', __FILE__)
 require 'rubygems'
 require 'bundler/setup'
 require 'bundler/gem_tasks'
