@@ -6,7 +6,7 @@ enhanced_date_select
 Overview
 --------
 
-An enhanced date select form helper that allows you to use the full {HTML spec}[http://www.w3.org/TR/html5] for date_select helper methods from rails. This is more than what you get with the default Rails date select helper because it can allow values to persist in dropdowns even if you submit a invalid value.
+An enhanced date select form helper that allows you to use the full [HTML specification](http://www.w3.org/TR/html5) for date_select helper methods from rails. This is more than what you get with the default Rails date select helper because it can allow values to persist in dropdowns even if you submit a invalid value.
 
 Features
 --------
@@ -97,7 +97,7 @@ form.enhanced_date_select :birthday,
 }
 ```
 
-The **enhanced_date_selec** takes all the standard options as the default Rails date_select method. The only difference is that it expects an hash with values for year, month and day instead of an date object.
+The **enhanced_date_select** takes all the standard options as the default Rails date_select method. The only difference is that it expects an hash with values for year, month and day instead of an date object.
 
 Testing
 -------
