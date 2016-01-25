@@ -1,7 +1,6 @@
 AllCops:
   Exclude:
     - enhanced_date_select.gemspec
-    - Guardfile
     - bin/**/*
     - vendor/**/**
 
@@ -66,4 +65,3 @@ Style/ExtraSpacing:
 
 Style/FileName:
   Enabled: false
-
