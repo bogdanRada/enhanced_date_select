@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'lorax', '~> 0', '>= 0.2'
   s.add_development_dependency 'mocha','~> 1.1', '>= 1.1.0'
   s.add_development_dependency 'nokogiri', '~> 1.6', '>= 1.6'
-  s.add_development_dependency 'rake',  '~> 10.5', '>= 10.5'
+  s.add_development_dependency 'rake',  '~> 11.0', '>= 11.0'
   s.add_development_dependency 'rspec-mocks',  '~>3.4', '>= 3.4'
   s.add_development_dependency 'rspec-rails', '~> 3.4', '>= 3.4'
 

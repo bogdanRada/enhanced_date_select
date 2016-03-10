@@ -50,3 +50,7 @@ end
 appraise "rails-4.2.5" do
   gem "rails", "4.2.5"
 end
+
+appraise "rails-4.2.6" do
+  gem "rails", "4.2.6"
+end

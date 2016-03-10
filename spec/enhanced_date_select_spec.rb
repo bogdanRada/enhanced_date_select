@@ -31,7 +31,7 @@ describe 'Enhanced DateSelect' do
                   prefix: tag_name)}"
   end
   before(:each) do
-    student.stub(:delete).and_return(student)
+    allow(student).to receive(:delete).and_return(student)
     if (Rails::VERSION::MAJOR.to_i <= 3)
       @instance_tag = instance_tag
     else
@@ -65,7 +65,7 @@ describe 'Enhanced DateSelect' do
       b_doc = @form_builder.enhanced_date_select(:birthday, options.merge(custom))
       a =  Nokogiri::XML(a_doc)
       b =  Nokogiri::XML(b_doc)
-      Lorax::Signature.new(a.root).signature.should eq Lorax::Signature.new(b.root).signature
+      expect(Lorax::Signature.new(a.root).signature).to eq Lorax::Signature.new(b.root).signature
     end
 
     it 'construct withoud the day dropdown' do
@@ -80,32 +80,32 @@ describe 'Enhanced DateSelect' do
       b_doc = @form_builder.enhanced_date_select(:birthday, options)
       a = Nokogiri::XML(a_doc)
       b = Nokogiri::XML(b_doc)
-      Lorax::Signature.new(a.root).signature.should eq Lorax::Signature.new(b.root).signature
+      expect(Lorax::Signature.new(a.root).signature).to eq Lorax::Signature.new(b.root).signature
     end
   end
 
   describe ActionView::Helpers::FormOptionsHelper do
     before(:each) do
       if (Rails::VERSION::MAJOR.to_i <= 3)
-        ActionView::Helpers::InstanceTag.stub(:new).and_return(@instance_tag)
+        allow(ActionView::Helpers::InstanceTag).to receive(:new).and_return(@instance_tag)
         @class = ActionView::Helpers::InstanceTag
       else
-        ActionView::Helpers::Tags::Base.stub(:new).and_return(@instance_tag)
+        allow(ActionView::Helpers::Tags::Base).to receive(:new).and_return(@instance_tag)
         @class = ActionView::Helpers::Tags::Base
       end
     end
 
-    it 'should call the instance tag with argument' do
+    it 'calls the instance tag with argument' do
       if (Rails::VERSION::MAJOR.to_i <= 3)
-        @class.should_receive(:new).with(student, 'birthday', self, options.delete(:object)).and_return(@instance_tag)
+        expect(@class).to receive(:new).with(student, 'birthday', self, options.delete(:object)).and_return(@instance_tag)
       else
-        @class.should_receive(:new).with(student, 'birthday', self, options).and_return(@instance_tag)
+        expect(@class).to receive(:new).with(student, 'birthday', self, options).and_return(@instance_tag)
       end
       enhanced_date_select(student, 'birthday', options)
     end
 
-    it 'should call the tp date_select_tag method' do
-      @instance_tag.should_receive(:to_enhanced_date_select_tag).with(options, {})
+    it 'calls the tp date_select_tag method' do
+      expect(@instance_tag).to receive(:to_enhanced_date_select_tag).with(options, {})
       enhanced_date_select(student, 'birthday', options)
     end
   end
@@ -113,16 +113,16 @@ describe 'Enhanced DateSelect' do
   if (Rails::VERSION::MAJOR.to_i <= 3)
     describe ActionView::Helpers::InstanceTag do
       before(:each) do
-        @instance_tag.stub(:enhanced_datetime_selector).and_return(@enhanced_datetime_selector)
+        allow(@instance_tag).to receive(:enhanced_datetime_selector).and_return(@enhanced_datetime_selector)
       end
 
-      it 'should call the datetimeselector' do
-        @instance_tag.should_receive(:enhanced_datetime_selector).with(options, html_options).and_return(@enhanced_datetime_selector)
+      it 'calls the datetimeselector' do
+        expect(@instance_tag).to receive(:enhanced_datetime_selector).with(options, html_options).and_return(@enhanced_datetime_selector)
         @instance_tag.to_enhanced_date_select_tag(options, html_options)
       end
 
-      it 'should call the datetimeselector' do
-        @enhanced_datetime_selector.should_receive(:enhanced_select_date).and_return(expected_result)
+      it 'calls the datetimeselector' do
+        expect(@enhanced_datetime_selector).to receive(:enhanced_select_date).and_return(expected_result)
         @instance_tag.to_enhanced_date_select_tag(options, html_options)
       end
     end
@@ -130,16 +130,16 @@ describe 'Enhanced DateSelect' do
   else
     describe ActionView::Helpers::Tags::Base do
       before(:each) do
-        @instance_tag.stub(:enhanced_datetime_selector).and_return(@enhanced_datetime_selector)
+        allow(@instance_tag).to receive(:enhanced_datetime_selector).and_return(@enhanced_datetime_selector)
       end
 
-      it 'should call the datetimeselector' do
-        @instance_tag.should_receive(:enhanced_datetime_selector).with(options, html_options).and_return(@enhanced_datetime_selector)
+      it 'calls the datetimeselector' do
+        expect(@instance_tag).to receive(:enhanced_datetime_selector).with(options, html_options).and_return(@enhanced_datetime_selector)
         @instance_tag.to_enhanced_date_select_tag(options, html_options)
       end
 
-      it 'should call the datetimeselector' do
-        @enhanced_datetime_selector.should_receive(:enhanced_select_date).and_return(expected_result)
+      it 'calls the datetimeselector' do
+        expect(@enhanced_datetime_selector).to receive(:enhanced_select_date).and_return(expected_result)
         @instance_tag.to_enhanced_date_select_tag(options, html_options)
       end
     end
