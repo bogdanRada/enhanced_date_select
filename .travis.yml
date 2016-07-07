@@ -7,6 +7,22 @@ bundler_args: "--no-deployment"
 script:
    - echo $BUNDLE_GEMFILE
    - bundle exec rake
+gemfile:
+  - gemfiles/rails_3.2.8.gemfile
+  - gemfiles/rails_3.2.12.gemfile
+  - gemfiles/rails_4.0.0.gemfile
+  - gemfiles/rails_4.0.2.gemfile
+  - gemfiles/rails_4.1.1.gemfile
+  - gemfiles/rails_4.1.4.gemfile
+  - gemfiles/rails_4.1.9.gemfile
+  - gemfiles/rails_4.2.0.gemfile
+  - gemfiles/rails_4.2.1.gemfile
+  - gemfiles/rails_4.2.2.gemfile
+  - gemfiles/rails_4.2.3.gemfile
+  - gemfiles/rails_4.2.4.gemfile
+  - gemfiles/rails_4.2.5.gemfile
+  - gemfiles/rails_4.2.6.gemfile
+  - gemfiles/rails_5.0.0.gemfile
 rvm:
   - 1.9.3
   - jruby-19mode
