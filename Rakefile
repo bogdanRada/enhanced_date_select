@@ -19,24 +19,25 @@ require 'rake'
 
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.rspec_opts = ['--backtrace '] if ENV['DEBUG']
+  spec.verbose = true
 end
 
 desc 'Default: run the unit tests.'
 task default: [:all]
 
 desc 'Test the plugin under all supported Rails versions.'
-task :all do
+task :all do |_t|
   if ENV['TRAVIS']
-    exec('bundle exec appraisal install && bundle exec rake appraisal spec && bundle exec rake coveralls:push')
+    # require 'json'
+    # puts JSON.pretty_generate(ENV.to_hash)
+    if ENV['BUNDLE_GEMFILE'] =~ /gemfiles/
+      appraisal_name = ENV['BUNDLE_GEMFILE'].scan(/rails\_(.*)\.gemfile/).flatten.first
+      command_prefix = "appraisal rails-#{appraisal_name}"
+      exec ("#{command_prefix} bundle install && #{command_prefix} bundle exec rspec && bundle exec rake coveralls:push ")
+    else
+      exec(' bundle exec appraisal install && bundle exec rake appraisal spec && bundle exec rake coveralls:push')
+   end
   else
     exec('bundle exec appraisal install && bundle exec rake appraisal spec')
   end
-end
-
-require 'rdoc/task'
-Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "enhanced_date_select #{EnhancedDateSelect.gem_version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
 end
