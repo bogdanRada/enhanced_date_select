@@ -37,7 +37,7 @@ describe 'Enhanced DateSelect' do
     else
       @instance_tag = rails4_instance_tag
     end
-    if Rails::VERSION::MAJOR.to_i >= 4 && Rails::VERSION::MINOR >= 1
+    if  Rails::VERSION::MAJOR.to_i >= 4
       @form_builder = rails41_form_builder
     else
       @form_builder = deprecated_form_builder
