@@ -21,14 +21,14 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'appraisal', '~> 2.1', '>= 2.1'
   s.add_development_dependency 'coveralls','~> 0.8', '>= 0.8'
   s.add_development_dependency 'lorax', '~> 0', '>= 0.2'
-  s.add_development_dependency 'mocha','~> 1.1', '>= 1.1.0'
+  s.add_development_dependency 'mocha','~> 1.2', '>= 1.2.0'
   s.add_development_dependency 'nokogiri', '~> 1.6', '>= 1.6'
   s.add_development_dependency 'rake',  '~> 12.0', '>= 12.0'
-  s.add_development_dependency 'rspec-mocks',  '~>3.4', '>= 3.4'
-  s.add_development_dependency 'rspec-rails', '~> 3.4', '>= 3.4'
-  
+  s.add_development_dependency 'rspec-mocks',  '~>3.5', '>= 3.5'
+  s.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5'
+
   s.add_development_dependency 'shoulda', '~> 3.5', '>= 3.5.0'
-  s.add_development_dependency 'simplecov', '~> 0.11', '>= 0.11'
-  s.add_development_dependency 'simplecov-summary', '~> 0.0', '>= 0.0.4'
+  s.add_development_dependency 'simplecov', '~> 0.12', '>= 0.12'
+  s.add_development_dependency 'simplecov-summary', '~> 0.0', '>= 0.0.5'
 
 end
