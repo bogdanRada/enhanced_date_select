@@ -12,10 +12,10 @@ module EnhancedDateSelect
     # the minor version of the gem
     MINOR = 4
     # the tiny version of the gem
-    TINY = 0
+    TINY = 1
     # if the version should be a e
     PRE = nil
-
+    
     # the full version of the gem composed from major minor tiny and prerelease versions
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
