@@ -17,19 +17,19 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n")
   s.test_files = s.files.grep(/^(spec)/)
   s.require_paths = ["lib"]
-  s.required_ruby_version = '>= 1.9'
+  s.required_ruby_version = '>= 2.2'
 
-  s.add_development_dependency 'appraisal', '~> 2.1', '>= 2.1'
+  s.add_development_dependency 'appraisal', '~> 2.2', '>= 2.2'
   s.add_development_dependency 'coveralls','~> 0.8', '>= 0.8'
   s.add_development_dependency 'lorax', '~> 0', '>= 0.2'
-  s.add_development_dependency 'mocha','~> 1.2', '>= 1.2.0'
-  s.add_development_dependency 'nokogiri', '~> 1.7', '>= 1.7'
-  s.add_development_dependency 'rake',  '~> 12.0', '>= 12.0'
-  s.add_development_dependency 'rspec-mocks',  '~>3.5', '>= 3.5'
-  s.add_development_dependency 'rspec-rails', '~> 3.5', '>= 3.5'
+  s.add_development_dependency 'mocha','~> 1.10', '>= 1.10.1'
+  s.add_development_dependency 'nokogiri', '~> 1.10', '>= 1.10.7'
+  s.add_development_dependency 'rake',  '~> 13.0', '>= 13.0.1'
+  s.add_development_dependency 'rspec-mocks',  '~>3.9', '>= 3.9.0'
+  s.add_development_dependency 'rspec-rails', '~> 3.9', '>= 3.9'
 
-  s.add_development_dependency 'shoulda', '~> 3.5', '>= 3.5.0'
-  s.add_development_dependency 'simplecov', '~> 0.12', '>= 0.12'
-  s.add_development_dependency 'simplecov-summary', '~> 0.0', '>= 0.0.5'
+  s.add_development_dependency 'shoulda', '~> 3.6', '>= 3.6.0'
+  s.add_development_dependency 'simplecov', '>= 0.9.1'
+  s.add_development_dependency 'simplecov-summary', '>= 0.0.6'
 
 end
