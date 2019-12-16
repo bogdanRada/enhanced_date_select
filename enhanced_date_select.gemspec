@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'coveralls','~> 0.8', '>= 0.8'
   s.add_development_dependency 'lorax', '~> 0', '>= 0.2'
   s.add_development_dependency 'mocha','~> 1.10', '>= 1.10.1'
-  s.add_development_dependency 'nokogiri', '~> 1.10', '>= 1.10.7'
+  s.add_development_dependency 'nokogiri', '>= 1.9'
   s.add_development_dependency 'rake',  '~> 13.0', '>= 13.0.1'
   s.add_development_dependency 'rspec-mocks',  '~>3.9', '>= 3.9.0'
   s.add_development_dependency 'rspec-rails', '~> 3.9', '>= 3.9'
