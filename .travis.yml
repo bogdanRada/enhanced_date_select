@@ -1,12 +1,11 @@
 language: ruby
-sudo: false
 
 cache: bundler
 
 bundler_args: --no-deployment --binstubs=./bin
 
 before_install:
-  -"echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
+  - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
   - gem update --system
   - gem --version
   - bash ./install-travis-bundler.sh
