@@ -1,3 +1,4 @@
+ENV['RAILS_ENV'] = 'test'
 require 'rubygems'
 require 'bundler/setup'
 
@@ -7,4 +8,5 @@ Coveralls.wear!
 require 'rails'
 require 'action_view'
 require 'enhanced_date_select'
-require 'lorax'
+require 'nokogiri'
+require 'lorax/signature'

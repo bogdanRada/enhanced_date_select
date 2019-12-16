@@ -5,7 +5,9 @@ if defined?(Rails) && defined?(ActionView)
       module FormOptionsHelper
         def enhanced_date_select(object, method, options = {}, html_options = {})
           if Rails::VERSION::MAJOR.to_i <= 3
+            #:nocov:
             @instance_tag = InstanceTag.new(object, method, self, options.delete(:object))
+            #:nocov:
           else
             @instance_tag = Tags::Base.new(object, method, self, options)
           end

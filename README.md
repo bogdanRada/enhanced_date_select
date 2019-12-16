@@ -22,11 +22,9 @@ Requirements
 Compatibility
 -------------
 
--	Rails >3.0 only. MRI 1.9, 2.x.
+-	Rails >= 4.0 only. MRI >= 2.2.0
 
 -	JRuby is not offically supported.
-
--	Ruby 1.8 is not officially supported.
 
 We will accept further compatibilty pull-requests but no upcoming versions will be tested against it.
 
