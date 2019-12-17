@@ -24,15 +24,6 @@ script:
    - echo $BUNDLE_GEMFILE
    - bundle exec rake
 
-deploy:
-  provider: rubygems
-  api_key: ${RUBYGEMS_API_KEY}
-  gemspec: enhanced_date_select.gemspec
-  skip_cleanup: false
-  on:
-    tags: true
-    branch: master
-
 gemfile:
   - gemfiles/rails_4.0.0.gemfile
   - gemfiles/rails_4.1.1.gemfile
