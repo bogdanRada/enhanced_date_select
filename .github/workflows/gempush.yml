@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - master
-
+    paths: 
+      - '*.gemspec'
+      - 'version.rb'
 jobs:
   build:
     name: Build + Publish
