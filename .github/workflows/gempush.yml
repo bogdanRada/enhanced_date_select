@@ -14,7 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - uses: srt32/git-actions@v0.0.3  
     - name: Set up Ruby 2.6
       uses: actions/setup-ruby@v1
       with:
@@ -44,10 +43,14 @@ jobs:
         gem push *.gem
       env:
         GEM_HOST_API_KEY: ${{secrets.RUBYGEMS_AUTH_TOKEN}}
-    
-    - name: Github Version Bump    
+            
+    - name: Github Version Dump 
       run: | 
         ruby -e "require \"#{Dir.pwd}/lib/version.rb\"; puts EnhancedDateSelect.gem_version.to_s" > version.txt
+    
+    - name: Git tag
+      uses: srt32/git-actions@v0.0.3  
+      with: |
         git remote add github https://${OWNER}:${GEM_HOST_API_KEY}@github.com/${OWNER}/enhanced_date_select.git
         git tag -a `cat version.txt` -m "Release `cat version.txt`" && rm -r version.txt
         git push github --tags  
