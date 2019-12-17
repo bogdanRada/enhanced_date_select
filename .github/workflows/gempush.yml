@@ -5,9 +5,7 @@ on:
     branches:
       - master
     paths: 
-      - '*.gemspec'
       - 'version.rb'
-      - '.github/workflows/gempush.yml'
         
 jobs:
   build:
