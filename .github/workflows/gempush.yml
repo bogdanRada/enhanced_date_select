@@ -48,7 +48,7 @@ jobs:
     - name: Github Version Bump    
       run: | 
         ruby -e "require \"#{Dir.pwd}/lib/version.rb\"; puts EnhancedDateSelect.gem_version.to_s" > version.txt
-        git remote add github https://bogdanRada:${GEM_HOST_API_KEY}@github.com/bogdanRada/enhanced_date_select.git
+        git remote add github https://${OWNER}:${GEM_HOST_API_KEY}@github.com/${OWNER}/enhanced_date_select.git
         git tag -a `cat version.txt` -m "Release `cat version.txt`" && rm -r version.txt
         git push github --tags  
       env:
