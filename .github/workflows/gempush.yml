@@ -31,6 +31,22 @@ jobs:
       env:
         GEM_HOST_API_KEY: ${{secrets.GPR_AUTH_TOKEN}}
         OWNER: bogdanRada
+   
+    - name: My Github Package Backup step ( try to yank and re-publish)
+      if: failure()
+      run: |
+        mkdir -p $HOME/.gem
+        touch $HOME/.gem/credentials
+        chmod 0600 $HOME/.gem/credentials
+        printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+        ruby -e "require \"#{Dir.pwd}/lib/version.rb\"; puts EnhancedDateSelect.gem_version.to_s" > version.txt
+        gem yank enhanced_date_select -v `cat version.txt` --key github --host https://rubygems.pkg.github.com/${OWNER} --quiet --silent --backtrace
+        rm -f *.gem
+        gem build *.gemspec
+        gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} *.gem
+      env:
+        GEM_HOST_API_KEY: ${{secrets.GPR_AUTH_TOKEN}}
+        OWNER: bogdanRada 
 
     - name: Publish to RubyGems
       run: |
