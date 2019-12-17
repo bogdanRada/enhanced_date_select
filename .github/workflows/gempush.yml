@@ -7,6 +7,8 @@ on:
     paths: 
       - '*.gemspec'
       - 'version.rb'
+      - '.github/workflows/gempush.yml'
+        
 jobs:
   build:
     name: Build + Publish
