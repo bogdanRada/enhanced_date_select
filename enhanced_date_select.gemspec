@@ -9,15 +9,25 @@ Gem::Specification.new do |s|
   s.email       = "raoul_ice@yahoo.com"
   s.homepage = "http://github.com/bogdanRada/enhanced_date_select"
   s.description = "\"Enhances ActionView with a customizable date select form helper where any valid HTML attribute can be applied.\""
-  s.authors     = ["bogdanRada"]
+  s.author      = 'bogdanRada'
+  s.authors     = [s.author]
 
   s.date = Date.today
 
-  s.licenses = ["MIT"]
-  s.files = `git ls-files`.split("\n")
-  s.test_files = s.files.grep(/^(spec)/)
+  s.licenses = ['MIT']
+  s.files = `git ls-files`.split("\n") - %w[.github/workflows/gempush.yml]
+  s.test_files = s.files.grep(/^(spec|test|features)/)
   s.require_paths = ["lib"]
+
   s.required_ruby_version = '>= 2.2'
+  s.required_rubygems_version = '>= 2.4'
+
+  s.metadata = {
+    'source_code' => s.homepage,
+    'bug_tracker' => "#{s.homepage}/issues",
+    'documentation' => "#{s.homepage}/README.md",
+    'github_repo' => "ssh://git@github.com:#{s.author}/#{s.name}"
+  }
 
   s.add_development_dependency 'appraisal', '~> 2.2', '>= 2.2'
   s.add_development_dependency 'coveralls','~> 0.8', '>= 0.8'
@@ -31,5 +41,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda', '~> 3.6', '>= 3.6.0'
   s.add_development_dependency 'simplecov', '>= 0.9.1'
   s.add_development_dependency 'simplecov-summary', '>= 0.0.6'
+  s.add_development_dependency 'keycutter'
 
 end
