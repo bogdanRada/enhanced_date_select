@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.date = Date.today
 
   s.licenses = ['MIT']
-  s.files = `git ls-files`.split("\n") - %w[.github/workflows/gempush.yml]
+  s.files = `git ls-files`.split("\n") - `git ls-files -- .github/*`.split("\n")
   s.test_files = s.files.grep(/^(spec|test|features)/)
   s.require_paths = ["lib"]
 
