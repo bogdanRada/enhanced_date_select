@@ -6,7 +6,8 @@ bundler_args: --no-deployment --binstubs=./bin
 
 before_install:
   - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
-  - gem update --system
+  - rvm rubygems current
+  - gem update --system || true
   - gem --version
   - bash ./install-travis-bundler.sh
   - bundle --version
