@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o pipefail
-set -o nounset
+# set -o errexit
+# set -o pipefail
+# set -o nounset
 
 rails_version="$(basename "${BUNDLE_GEMFILE:="$(pwd)/Gemfile"}" .gemfile | sed 's/[^0-9.]*\([0-9.]*\).*/\1/')"
 
