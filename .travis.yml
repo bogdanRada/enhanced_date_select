@@ -10,20 +10,20 @@ before_install:
   - gem update --system || true
   - gem --version
   - bash ./install-travis-bundler.sh
-  - bundle --version
+  - bundle ${MY_BUNDLER_VERSION} --version
 
 install:
-  - bundle config --local jobs 3
-  - bundle config --local retry 3
-  - bundle config --local binstubs ./bin
-  - bundle config --local bin ./bin
-  - bundle install
+  - bundle ${MY_BUNDLER_VERSION} config --local jobs 3
+  - bundle ${MY_BUNDLER_VERSION} config --local retry 3
+  - bundle ${MY_BUNDLER_VERSION} config --local binstubs ./bin
+  - bundle ${MY_BUNDLER_VERSION} config --local bin ./bin
+  - bundle ${MY_BUNDLER_VERSION} install
   - gem env
-  - bundle env
+  - bundle ${MY_BUNDLER_VERSION} env
 
 script:
    - echo $BUNDLE_GEMFILE
-   - bundle exec rake
+   - bundle ${MY_BUNDLER_VERSION} exec rake
 
 gemfile:
   - gemfiles/rails_4.0.0.gemfile
