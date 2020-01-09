@@ -9,7 +9,7 @@ before_install:
   - rvm rubygems current
   - gem update --system || true
   - gem --version
-  - bash ./install-travis-bundler.sh
+  - source ./install-travis-bundler.sh
   - bundle ${MY_BUNDLER_VERSION} --version
 
 install:
