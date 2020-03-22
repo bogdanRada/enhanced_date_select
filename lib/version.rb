@@ -12,7 +12,7 @@ module EnhancedDateSelect
     # the minor version of the gem
     MINOR = 5
     # the tiny version of the gem
-    TINY = 0
+    TINY = 2
     # if the version should be a e
     PRE = nil
 
