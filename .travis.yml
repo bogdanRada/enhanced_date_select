@@ -1,6 +1,6 @@
 language: ruby
 
-cache: false
+cache: bundler
 
 bundler_args: --no-deployment --binstubs=./bin
 
@@ -13,6 +13,7 @@ before_install:
   - bundle ${MY_BUNDLER_VERSION} --version
 
 install:
+  - bundle ${MY_BUNDLER_VERSION} config --local path vendor/bundle
   - bundle ${MY_BUNDLER_VERSION} config --local jobs 3
   - bundle ${MY_BUNDLER_VERSION} config --local retry 3
   - bundle ${MY_BUNDLER_VERSION} config --local binstubs ./bin
@@ -74,7 +75,7 @@ matrix:
   - rvm: 2.4.0
     gemfile: gemfiles/rails_6.0.0.gemfile
   - rvm: 2.4.0
-    gemfile: gemfiles/rails_6.0.1.gemfile  
+    gemfile: gemfiles/rails_6.0.1.gemfile
   - rvm: 2.4.0
     gemfile: gemfiles/rails_api_4.2.7.gemfile
   - rvm: 2.5.3
